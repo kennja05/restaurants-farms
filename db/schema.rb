@@ -35,6 +35,10 @@ ActiveRecord::Schema.define(version: 2020_01_15_175011) do
   end
 
   create_table "orders", force: :cascade do |t|
+    t.integer "quantity"
+    t.integer "farm_id"
+    t.integer "fruit_id"
+    t.integer "restaurant_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end

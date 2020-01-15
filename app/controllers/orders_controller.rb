@@ -1,7 +1,28 @@
 class OrdersController < ApplicationController
+  
+  def show
+    @order = Order.find(params[:id])
+  end 
+  
+  
   def new
+    @order = Order.new
   end
+
+  def create
+    @order = Order.create!(order_params)
+    #render :new
+    @order = Order.new
+    redirect_to new_order_path
+  end 
 
   def edit
   end
+
+  private
+
+  def order_params
+    params.require(:order).permit(:quantity, :farm_id, :restaurant_id, :fruit_id)
+  end 
+
 end
