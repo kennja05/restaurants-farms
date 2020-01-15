@@ -8,10 +8,10 @@ class OrdersController < ApplicationController
   def new
     @fruits = Fruit.all
     @order = Order.new
+    
   end
 
   def create
-    byebug
     @order = Order.create!(order_params)
     #render :new
     

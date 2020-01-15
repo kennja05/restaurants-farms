@@ -1,22 +1,9 @@
 <h1>Orders#new</h1>
 
-<!-- <%= form_for @order do |f| %>
-<%= f.label :quantity %>
-<%= f.number_field :quantity %>
-<%= f.label :farm_id %>
-<%= f.collection_select :farm_id, Farm.all, :id, :name %>
-<%= f.label :fruit_id %>
-<%= f.collection_select :fruit_id, Fruit.all, :id, :name %>
-<%= f.label :restaurant_id %>
-<%= f.collection_select :restaurant_id, Restaurant.all, :id, :name %>
-<%= f.submit %>
-<% end  %> -->
-
-<%= form_tag('/orders/'), method: :post do %>
+<%= form_tag('/orders', method: :post) do %>
     <% @fruits.each do |fruit| %>
         <%= label_tag fruit.name %>
         <%= number_field_tag name=fruit.name %>
     <% end %>
     <%= submit_tag "submit" %>
-    <% end %>
 <% end %>
