@@ -1,5 +1,6 @@
-<h1>Order show</h1>
+<h1>Order show page </h1>
 <%= @order.quantity %><br>
 <%= @order.farm.name %><br>
 <%= @order.fruit.name %><br>
-<%= @order.restaurant.name %><br>
+<%= link_to @order.restaurant.name, restaurant_path(@order.restaurant) %><br>
+<%= link_to "edit order", edit_order_path(@order) %>

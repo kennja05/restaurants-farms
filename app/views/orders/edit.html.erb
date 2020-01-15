@@ -7,7 +7,5 @@
 <%= f.collection_select :farm_id, Farm.all, :id, :name %>
 <%= f.label :fruit_id %>
 <%= f.collection_select :fruit_id, Fruit.all, :id, :name %>
-<%= f.label :restaurant_id %>
-<%= f.collection_select :restaurant_id, Restaurant.all, :id, :name %>
 <%= f.submit %>
 <% end  %>
