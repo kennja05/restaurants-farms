@@ -6,13 +6,15 @@ class OrdersController < ApplicationController
   
   
   def new
+    @fruits = Fruit.all
     @order = Order.new
   end
 
   def create
+    byebug
     @order = Order.create!(order_params)
     #render :new
-    @order = Order.new
+    
     redirect_to new_order_path
   end 
 
