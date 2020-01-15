@@ -19,3 +19,6 @@ Order has a `quantity`, a `Farm`, a `Fruit`, and a `Restaurant`
     - Should be able to create a new Order and associate it with a `Restaurant`, a `Farm` and a `Fruit`. You should be able to create multiple orders from a single new Order form. The options of `Fruits` that an order can have should only be from the list of `Fruits` that the `Farm` owns. In other words, if the order is with Restuarant A and Farm B and Farm B only has apples and oranges, then the order can only be made with either apples and oranges and not bananas or avocados
     - Should be able to update and Order and change it's `quantity`, `Farm`, or `Fruits`
     - Order show page should show all of it's information
+
+
+    *Hint* You may have to make changes to the schema to make this work
